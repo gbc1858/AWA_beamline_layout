@@ -1,0 +1,16 @@
+path_beamline_element = '/Users/chen/Desktop/ANL_work/HEP_division/beam_layout/img/'
+csv_file_path = '/Users/chen/Desktop/ANL_work/HEP_division/beam_layout/'
+
+
+peach_quad = path_beamline_element + 'peach_quad.png'
+Radiabeam_dipole = path_beamline_element + 'Radiabeam_dipole.png'
+Radiabeam_quad = path_beamline_element + 'Radiabeam_quad.png'
+Radiabeam_skew = path_beamline_element + 'Radiabeam_skew.png'
+solenoid = path_beamline_element + 'solenoid.png'
+IMP_quad = path_beamline_element + 'IMP_quad.png'
+LINAC = path_beamline_element + 'LINAC.png'
+YAG = path_beamline_element + 'YAG.png'
+gun = path_beamline_element + 'gun.png'
+linac = path_beamline_element + 'linac.png'
+slit = path_beamline_element + 'slit.png'
+tdc = path_beamline_element + 'tdc.png'

@@ -2,6 +2,12 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.DS_Store
+*.xlsx
+*.pdf
+*.pptx
+.gitignore
+NIU_code/
 
 # C extensions
 *.so
