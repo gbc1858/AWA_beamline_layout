@@ -19,13 +19,13 @@ Generate beamline layout based on the csv input file.
    If want to have label plotted together , 
    ```python
    plot_beam_layout(data.zone_3A_element, data.zone_3A_zpos, data.zone_3A_tag, data.zone_3A_comment, zone='3A',
-                    show_label=True, save_image=save_image)
+                    show_label=True, save_image=False)
    ```
    ![img](readme_img/zone_3A.png)
    If want to hide the label, 
    ```python
    plot_beam_layout(data.zone_4_element, data.zone_4_zpos, data.zone_4_tag, data.zone_4_comment, zone='4',
-                    show_label=False, save_image=save_image)
+                    show_label=False, save_image=False)
    ```
    ![img](readme_img/zone_3A_nolabel.png)
 

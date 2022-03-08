@@ -6,7 +6,7 @@ data.sort_input()
 
 save_image = False
 plot_beam_layout(data.zone_1_element, data.zone_1_zpos, data.zone_1_tag, data.zone_1_comment, zone='1',
-                 show_label=True, save_image=save_image)
+                 show_label=True, save_image=False)
 plot_beam_layout(data.zone_2_element, data.zone_2_zpos, data.zone_2_tag, data.zone_2_comment, zone='2',
                  show_label=True, save_image=save_image)
 plot_beam_layout(data.zone_3A_element, data.zone_3A_zpos, data.zone_3A_tag, data.zone_3A_comment, zone='3A',
