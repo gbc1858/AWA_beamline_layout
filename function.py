@@ -97,7 +97,7 @@ def zpos_ref_to_zero(zpos, comment, zone):
                 zpos_new.append(element)
     return [zpos[0]] + zpos_new
 
-#
+
 # class HandlerImage(HandlerBase):
 #     def __init__(self, img_path):
 #         self.image_data = plt.imread(img_path)

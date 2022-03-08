@@ -57,6 +57,7 @@ Generate beamline layout based on the csv input file.
    
    
 ## TODOs
+- [ ] Add a GUI???
 - [ ] Add an option to generate the whole beamline map.
 - [ ] Add extra YAGs on the deflected path after all dipoles (mainly in zone 4 and 5).
 
