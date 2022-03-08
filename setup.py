@@ -1,6 +1,5 @@
 path_beamline_element = '/Users/chen/Desktop/ANL_work/HEP_division/beam_layout/img/'
-csv_file_path = '/Users/chen/Desktop/ANL_work/HEP_division/beam_layout/'
-
+path_csv_file = '/Users/chen/Desktop/ANL_work/HEP_division/beam_layout/test_03072022.csv'
 
 peach_quad = path_beamline_element + 'peach_quad.png'
 Radiabeam_dipole = path_beamline_element + 'Radiabeam_dipole.png'

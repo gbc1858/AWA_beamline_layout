@@ -7,6 +7,7 @@ from matplotlib.legend_handler import HandlerBase
 from matplotlib.image import BboxImage
 plt.rcParams['savefig.dpi'] = 500
 
+
 class InputFile:
     def __init__(self, file):
         self.file = file
