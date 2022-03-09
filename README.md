@@ -6,7 +6,8 @@ Generate beamline layout based on the csv input file.
 ## Usage
 1. Install all packages in `requirements.txt`.
 
-2. In `setup.py`, change/verify the path to the beamline input csv (`path_csv_file`), and the image folder for all beamline elements (`path_beamline_element`).
+2. In `setup.py`, change/verify the path to the beamline input xlsx (`path_parent_xlsx_file`), and the image folder for 
+all beamline elements (`path_beamline_element`). 
 
 3. Run `main.py` to generate the specific zone map of the beamline, 
    ```python
