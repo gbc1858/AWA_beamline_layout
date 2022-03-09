@@ -18,13 +18,17 @@ Generate beamline layout based on the csv input file.
    ```
    If you want to have the label plotted together , 
    ```python
-   plot_beam_layout(data.zone_3A_element, data.zone_3A_zpos, data.zone_3A_tag, data.zone_3A_comment, zone='3A',
+   plot_beam_layout(data.zone_3A_element, data.zone_3A_zpos, 
+                    data.zone_3A_tag, data.zone_3A_comment, 
+                    zone='3A',
                     show_label=True, save_image=False)
    ```
    ![img](readme_img/zone_3A.png)
    If you want to hide the label, 
    ```python
-   plot_beam_layout(data.zone_4_element, data.zone_4_zpos, data.zone_4_tag, data.zone_4_comment, zone='4',
+   plot_beam_layout(data.zone_4_element, data.zone_4_zpos, 
+                    data.zone_4_tag, data.zone_4_comment, 
+                    zone='4',
                     show_label=False, save_image=False)
    ```
    ![img](readme_img/zone_3A_nolabel.png)
@@ -42,7 +46,7 @@ Generate beamline layout based on the csv input file.
    - tag - the category tag for each element.
    - comment - this is meaningless, and for plotting purpose only. 
 
-3. the current available tags are shown in the following table. The corresponding figures to each element can be changed by replacing the image file in `img`.
+3. The current available tags are shown in the following table. The corresponding figures to each element can be changed by replacing the image file in `img`.
    
    | Available Tags                                                                                              |
    |:-----------------------------------------------------------------------------------------------------------:|
@@ -53,13 +57,11 @@ Generate beamline layout based on the csv input file.
    <img src="readme_img/zone_3A_fake_input.png" alt="drawing" width="300"/>
    
    ![img](readme_img/zone_3A_comp.png)
-
-   
    
 ## TODOs
 - [ ] Add a GUI???
 - [ ] Add an option to generate the whole beamline map.
 - [ ] Add extra YAGs on the deflected path after all dipoles (mainly in zone 4 and 5).
-
    ![img](readme_img/zone_4.png)
    ![img](readme_img/zone_5.png)
+- [ ] Plot a more meaningful y-axis based on real dimensions (mainly for zone 4 and 5).

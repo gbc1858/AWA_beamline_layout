@@ -14,6 +14,7 @@ plot_beam_layout(data.zone_3A_element, data.zone_3A_zpos, data.zone_3A_tag, data
 plot_beam_layout(data.zone_3B_element, data.zone_3B_zpos, data.zone_3B_tag, data.zone_3B_comment, zone='3B',
                  show_label=True, save_image=save_image)
 plot_beam_layout(data.zone_4_element, data.zone_4_zpos, data.zone_4_tag, data.zone_4_comment, zone='4',
-                 show_label=False, save_image=save_image)
-plot_beam_layout(data.zone_5_element, data.zone_5_zpos, data.zone_5_tag, data.zone_5_comment, zone='5',
+                 show_label=True, save_image=save_image)
+plot_beam_layout(data.zone_5_element, data.zone_5_zpos,
+                 data.zone_5_tag, data.zone_5_comment, zone='5',
                  show_label=True, save_image=save_image)

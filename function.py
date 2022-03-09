@@ -66,7 +66,6 @@ class InputFile:
                              zpos_ref_to_zero(self.zone_3A_zpos, self.zone_3A_comment, zone='3A')]
         self.zone_3B_zpos = [i + self.zone_3A_zpos[-1] for i in
                              zpos_ref_to_zero(self.zone_3B_zpos, self.zone_3B_comment, zone='3B')]
-
         self.zone_4_zpos = [i + self.zone_2_zpos[-1] for i in
                             zpos_ref_to_zero(self.zone_4_zpos, self.zone_4_comment, zone='4')]
         self.zone_5_zpos = [i + self.zone_4_zpos[-1] for i in
@@ -77,7 +76,7 @@ def zpos_ref_to_zero(zpos, comment, zone):
     zpos_new = []
     x = []
     if zone in ('1', '2', '3A', '3B'):
-        # eliminate the elements from the split-out routes.
+        # eliminate the elements from the deflected path.
         for i in range(len(comment)):
             if comment[i]:
                 x.append(i)
@@ -137,11 +136,12 @@ def plot_beamline_element(x, y, image_path, ax=None, zoom=0.1):
 def plot_beam_layout(element_name, zpos, tag, comment, zone, show_label=True, save_image=False):
     fig, ax1 = plt.subplots(figsize=(12, 3))
     for i in range(len(tag)):
-        y = 0
+        y = 0               # meaningless y value for plotting the deflected path only
         if comment[i] == 'upper stage 1':
-            y = 0.04
+            y = 0.04        # meaningless y value for plotting the deflected path only
         elif comment[i] == 'upper stage 2':
-            y = 0.09
+            y = 0.09        # meaningless y value for plotting the deflected path only
+
         if tag[i] == 'Radiabeam skew':
             plot_beamline_element(zpos[i], [y], Radiabeam_skew, ax=ax1)
             ax1.annotate(element_name[i], xy=(zpos[i], y), xytext=(zpos[i], y + 0.017),
@@ -182,10 +182,14 @@ def plot_beam_layout(element_name, zpos, tag, comment, zone, show_label=True, sa
             plot_beamline_element(zpos[i], [y], tdc, ax=ax1)
             ax1.annotate(element_name[i], xy=(zpos[i], y), xytext=(zpos[i], y + 0.017),
                          ha='center', rotation=0) if show_label else None
+        if tag[i] not in available_tags:
+            plot_beamline_element(zpos[i], [y], unknown, ax=ax1)
+            ax1.annotate(element_name[i], xy=(zpos[i], y), xytext=(zpos[i], y + 0.017),
+                         ha='center', rotation=45) if show_label else None
 
     plt.gca().invert_xaxis()
     plt.xlabel('z from gun start (cm)', fontsize=12)
-    plt.title('Layout of Zone ' + zone, fontsize=12)
+    plt.title('Layout of Zone ' + zone + f'\n(Input file: {path_parent_xlsx_file.split("/")[-1]})', fontsize=12)
     if zone == '4':
         plt.ylim(0.005, 0.15)
     elif zone == '5':
