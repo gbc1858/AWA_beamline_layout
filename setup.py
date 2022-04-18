@@ -2,10 +2,11 @@
 # Program setup
 ###############
 import pandas as pd
+import os
 
 
-path_beamline_element = '/Users/chen/Desktop/ANL_work/HEP_division/beam_layout/img/'
-path_parent_xlsx_file = '/Users/chen/Desktop/ANL_work/HEP_division/beam_layout/test.xlsx'
+path_beamline_element = os.getcwd() + '/img/'
+path_parent_xlsx_file = os.getcwd() + '/04182022.xlsx'
 
 df = pd.read_excel(path_parent_xlsx_file, engine='openpyxl')
 df.to_csv(path_parent_xlsx_file.split('/')[-1].split('.')[0] + '.csv', index=False, quotechar="'")
@@ -25,8 +26,12 @@ linac = path_beamline_element + 'linac.png'
 slit = path_beamline_element + 'slit.png'
 tdc = path_beamline_element + 'tdc.png'
 unknown = path_beamline_element + 'unknown.png'
+ict = path_beamline_element + 'ICT.png'
+pets = path_beamline_element + 'PETS.png'
+dut = path_beamline_element + 'DUT.png'
+
 
 available_tags = ['gun', 'solenoid', 'linac', 'yag', 'Radiabeam skew', 'Radiabeam dipole', 'IMP quad', 'peach quad',
-                  'tdc', 'slit']
+                  'tdc', 'slit', 'ict', 'pets', 'dut']
 
 # if __name__ == '__main__':

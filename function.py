@@ -157,10 +157,10 @@ def plot_beam_layout(element_name, zpos, tag, comment, zone, show_label=True, sa
         if tag[i] == 'yag':
             plot_beamline_element(zpos[i], [y], YAG, ax=ax1)
             ax1.annotate(element_name[i], xy=(zpos[i], y), xytext=(zpos[i], y + 0.017),
-                         ha='center', rotation=0) if show_label else None
+                         ha='center', rotation=45) if show_label else None
         if tag[i] == 'IMP quad':
             plot_beamline_element(zpos[i], [y], IMP_quad, ax=ax1)
-            ax1.annotate(element_name[i], xy=(zpos[i], y), xytext=(zpos[i], y + 0.017),
+            ax1.annotate(element_name[i], xy=(zpos[i], y), xytext=(zpos[i], y + 0.023),
                          ha='center', rotation=45) if show_label else None
         if tag[i] == 'solenoid':
             plot_beamline_element(zpos[i], [y], solenoid, ax=ax1)
@@ -182,6 +182,18 @@ def plot_beam_layout(element_name, zpos, tag, comment, zone, show_label=True, sa
             plot_beamline_element(zpos[i], [y], tdc, ax=ax1)
             ax1.annotate(element_name[i], xy=(zpos[i], y), xytext=(zpos[i], y + 0.017),
                          ha='center', rotation=0) if show_label else None
+        if tag[i] == 'ict':
+            plot_beamline_element(zpos[i], [y], ict, ax=ax1)
+            ax1.annotate(element_name[i], xy=(zpos[i], y), xytext=(zpos[i], y + 0.023),
+                         ha='center', rotation=45) if show_label else None
+        if tag[i] == 'pets':
+            plot_beamline_element(zpos[i], [y], pets, ax=ax1)
+            ax1.annotate(element_name[i], xy=(zpos[i], y), xytext=(zpos[i], y + 0.017),
+                         ha='center', rotation=0) if show_label else None
+        if tag[i] == 'dut':
+            plot_beamline_element(zpos[i], [y], dut, ax=ax1)
+            ax1.annotate(element_name[i], xy=(zpos[i], y), xytext=(zpos[i], y + 0.017),
+                         ha='center', rotation=45) if show_label else None
         if tag[i] not in available_tags:
             plot_beamline_element(zpos[i], [y], unknown, ax=ax1)
             ax1.annotate(element_name[i], xy=(zpos[i], y), xytext=(zpos[i], y + 0.017),
@@ -200,5 +212,3 @@ def plot_beam_layout(element_name, zpos, tag, comment, zone, show_label=True, sa
     plt.tight_layout()
     fig.savefig('zone_' + zone + '.png', format='png') if save_image else None
     plt.show()
-
-
