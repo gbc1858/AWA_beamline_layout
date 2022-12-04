@@ -1,3 +1,6 @@
+# from function_css import *
+# from function_eex import *
+# from function_twgun import *
 from function import *
 from setup import *
 
@@ -16,5 +19,8 @@ plot_beam_layout(data.zone_3B_element, data.zone_3B_zpos, data.zone_3B_tag, data
 plot_beam_layout(data.zone_4_element, data.zone_4_zpos, data.zone_4_tag, data.zone_4_comment, zone='4',
                  show_label=True, save_image=save_image)
 plot_beam_layout(data.zone_5_element, data.zone_5_zpos,
-                 data.zone_5_tag, data.zone_5_comment, zone='5',
-                 show_label=True, save_image=save_image)
+                 data.zone_5_tag, data.zone_5_comment, zone='5', show_label=True, save_image=save_image)
+# #
+# plot_beam_layout(data.twgun_element, data.twgun_zpos,
+#                  data.twgun_tag, data.twgun_comment, zone='TW_gun',
+#                  show_label=True, save_image=save_image)
