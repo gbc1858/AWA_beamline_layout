@@ -33,6 +33,11 @@ all beamline elements (`path_beamline_element`).
                     show_label=False, save_image=False)
    ```
    ![img](readme_img/zone3b_nolabel.png)
+4. To draw the deflected path (i.e. zone 5), add the comments of <strong>upper stage 1</strong> or <strong>upper stage 2</strong>.
+   
+   <img src="readme_img/zone5_input.png" alt="drawing" width="300"/>
+   
+   ![img](readme_img/zone5.png)
 
 ### To revise the beamline layout
 1. In the beamline csv input file, all elements are put under the corresponding zones, ie.
@@ -47,13 +52,13 @@ all beamline elements (`path_beamline_element`).
    - tag - the category tag for each element.
    - comment - meaningless, for plotting the deflected paths only. 
 
- The current available tags are shown in the following table. The corresponding figures to each element can be changed by replacing the image file in `img`.
-   
+   The current available tags are shown in the following table. The corresponding figures to each element can be changed by replacing the image file in `img`.
+
    | Available Tags                                                                                                                                                    |
    |:-----------------------------------------------------------------------------------------------------------:|
    | gun, solenoid, linac, yag, Radiabeam skew, Radiabeam dipole, <br/>IMP quad, peach quad, tdc, slit, ict, pets, dut, <br/>trim, yag_down, yag_up, yag_straight, dot |
 
-4. If extra elements are added to the beamline, simply insert the element under the zone. Note: the sequence of the elements DOES matter for plotting.
+2. If extra elements are added to the beamline, simply insert the element under the zone column. Note: the sequence of the elements DOES matter for plotting.
 
    <img src="readme_img/zone3a_comp.png" alt="drawing" width="300"/>
    
