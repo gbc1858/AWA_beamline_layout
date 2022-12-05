@@ -40,7 +40,7 @@ all beamline elements (`path_beamline_element`).
    ![img](readme_img/zone5.png)
 
 ### To revise the beamline layout
-1. In the beamline csv input file, all elements are put under the corresponding zones, ie.
+1. In the beamline csv input file, all elements are put under the corresponding zone with the given headers, i.e.
    
    | Zone 1  |       |     |         |
    |:-------:|:-----:|:---:|:-------:|
